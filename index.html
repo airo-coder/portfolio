@@ -4,36 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Airo Parondo — CS Student & Developer</title>
-  <meta name="description" content="Portfolio of Airo Parondo — BS Computer Science student at the University of Mindanao. Full-stack web development, cybersecurity, and 136 wpm typist.">
+  <meta name="description" content="Portfolio of Airo Parondo — BS Computer Science student at the University of Mindanao. Cybersecurity enthusiast, web developer, and 136 wpm typist.">
   <meta name="theme-color" content="#323437">
-
-  <!-- Fonts -->
+  <meta property="og:title" content="Airo Parondo — CS Student & Developer">
+  <meta property="og:description" content="Third-year CS student at the University of Mindanao. Cybersecurity, web dev, and 136 wpm typist.">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Roboto+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- Animated background -->
+<div class="char-bg" id="char-bg" aria-hidden="true"></div>
+<div class="gradient-orbs" aria-hidden="true">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
 
 <!-- Mobile overlay -->
 <div class="mobile-overlay" id="mobile-overlay"></div>
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <span class="logo">airo<span class="logo-dot">_</span></span>
-
+    <span class="logo">airo<span class="logo-accent">.</span>dev</span>
     <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
-
     <nav id="main-nav">
       <a href="#about">about</a>
       <a href="#projects">projects</a>
-      <a href="#education">education</a>
-      <a href="#certs">certs</a>
+      <a href="#credentials">credentials</a>
       <a href="#typing">typing</a>
       <a href="#contact">contact</a>
     </nav>
@@ -42,293 +45,233 @@
 
 <main>
 
-  <!-- ─── HERO ─── -->
+  <!-- ═══ HERO — The Typing Experience ═══ -->
   <section class="hero wrap" id="hero">
-    <p class="hero-eyebrow hero-anim-1"><span class="accent">//</span> BS Computer Science · University of Mindanao</p>
-    <h1 class="hero-anim-2">Airo Parondo<span class="cursor"></span></h1>
-    <p class="hero-tagline hero-anim-3">
-      Third-year CS student building practical software across web development,
-      security, and applied machine learning. Currently exploring deepfake detection,
-      full-stack web apps, and anything that pushes my understanding of how systems
-      actually work.
-    </p>
-    <div class="hero-actions hero-anim-4">
-      <a class="btn btn-accent" href="#projects">view_projects</a>
-      <a class="btn btn-ghost" href="https://github.com/airo-28" target="_blank" rel="noopener">github ↗</a>
-      <a class="btn btn-ghost" href="#contact">contact</a>
-    </div>
-  </section>
 
-  <!-- ─── HIGHLIGHTS ─── -->
-  <section class="highlights">
-    <div class="wrap highlights-grid">
-      <div class="highlight">
-        <span class="highlight-value">3</span>
-        <span class="highlight-label">Pearson IT certs</span>
+    <!-- Typing simulation -->
+    <div class="typing-sim hero-enter-1">
+      <p class="typing-sim-label">// monkeytype simulation</p>
+      <div class="typing-sim-text" id="typing-sim-text">
+        <!-- JS fills this with char spans -->
       </div>
-      <div class="highlight">
-        <span class="highlight-value">8</span>
-        <span class="highlight-label">public repos</span>
-      </div>
-      <div class="highlight">
-        <span class="highlight-value">171 wpm</span>
-        <span class="highlight-label">peak speed (15s)</span>
-      </div>
-      <div class="highlight">
-        <span class="highlight-value">top 3.15%</span>
-        <span class="highlight-label">global 60s leaderboard</span>
+      <div class="typing-sim-wpm"><span id="sim-wpm-display">136</span><span>wpm</span></div>
+    </div>
+
+    <!-- Result card -->
+    <div class="hero-result hero-enter-2">
+      <p class="hero-result-label">test complete</p>
+      <h1 class="hero-name">Airo Parondo</h1>
+      <p class="hero-desc">
+        Third-year CS student at the University of Mindanao with a growing
+        interest in cybersecurity. I have some experience in web development
+        and software engineering through coursework, and I'm always eager to
+        learn whatever comes next.
+      </p>
+      <div class="hero-links">
+        <a class="hero-link primary" href="#projects">projects</a>
+        <a class="hero-link" href="https://github.com/airo-28" target="_blank" rel="noopener">github ↗</a>
+        <a class="hero-link" href="https://www.linkedin.com/in/airo-parondo-640719327/" target="_blank" rel="noopener">linkedin ↗</a>
+        <a class="hero-link" href="#contact">contact</a>
       </div>
     </div>
+
   </section>
 
-  <!-- ─── ABOUT ─── -->
+  <!-- ═══ ABOUT ═══ -->
   <section id="about" class="section wrap reveal">
-    <div class="section-header">
-      <h2 class="section-title"><span class="num">01</span> about</h2>
-    </div>
-    <div class="about-grid">
+    <p class="section-label">about</p>
+    <div class="about-content">
       <div class="about-text">
         <p>
-          I'm a third-year <strong>Computer Science</strong> student at the
-          <strong>University of Mindanao</strong> with a strong interest in
-          cybersecurity, databases, and applied software engineering. I'm drawn
-          to computer science broadly — still learning, still adapting to new
-          tools and trends, and comfortable picking up new stacks when a project
-          calls for it.
+          I'm a third-year <em>Computer Science</em> student at the
+          <em>University of Mindanao</em> in Davao City. My main interest
+          is <em>cybersecurity</em> — I earned a Pearson IT Specialist
+          certification in it and I'm exploring the field further through
+          coursework and self-study.
         </p>
         <p>
-          Outside of coursework, I work on personal projects involving deepfake
-          auditing and full-stack web applications, and I track my own typing
-          performance as a small obsession in efficiency and consistency.
+          Through my program, I've built several web applications and
+          software engineering projects, mostly with PHP and MySQL. I'm
+          still early in my journey, but I enjoy the process of learning
+          new tools, adapting to different stacks, and understanding how
+          systems actually work under the hood.
+        </p>
+        <p>
+          Outside of academics, I track my typing performance on MonkeyType
+          as a daily habit — it's a small obsession in efficiency and
+          consistency that keeps me sharp.
         </p>
       </div>
-      <div class="skills-card">
-        <h3>skills & tools</h3>
-        <ul class="skills-list">
-          <li>Java</li>
-          <li>PHP</li>
-          <li>Python</li>
-          <li>JavaScript</li>
-          <li>HTML & CSS</li>
-          <li>React</li>
-          <li>Laravel</li>
-          <li>MySQL</li>
-          <li>Git & GitHub</li>
-          <li>VS Code</li>
-          <li>Figma</li>
-        </ul>
+      <div class="skills-typed reveal" id="skills-typed">
+        <div class="skills-typed-header">
+          <span class="dot"></span> skills & tools
+        </div>
+        <div class="skill-line" style="transition-delay:0.05s"><span class="prompt">→</span> <span class="skill-name">Java</span></div>
+        <div class="skill-line" style="transition-delay:0.1s"><span class="prompt">→</span> <span class="skill-name">PHP</span></div>
+        <div class="skill-line" style="transition-delay:0.15s"><span class="prompt">→</span> <span class="skill-name">Python</span></div>
+        <div class="skill-line" style="transition-delay:0.2s"><span class="prompt">→</span> <span class="skill-name">JavaScript</span></div>
+        <div class="skill-line" style="transition-delay:0.25s"><span class="prompt">→</span> <span class="skill-name">HTML & CSS</span></div>
+        <div class="skill-line" style="transition-delay:0.3s"><span class="prompt">→</span> <span class="skill-name">React</span></div>
+        <div class="skill-line" style="transition-delay:0.35s"><span class="prompt">→</span> <span class="skill-name">Laravel</span></div>
+        <div class="skill-line" style="transition-delay:0.4s"><span class="prompt">→</span> <span class="skill-name">MySQL</span></div>
+        <div class="skill-line" style="transition-delay:0.45s"><span class="prompt">→</span> <span class="skill-name">Git & GitHub</span></div>
+        <div class="skill-line" style="transition-delay:0.5s"><span class="prompt">→</span> <span class="skill-name">Figma</span></div>
+        <div class="skill-line" style="transition-delay:0.55s"><span class="prompt">→</span> <span class="skill-name">VS Code</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ─── PROJECTS ─── -->
-  <section id="projects" class="section wrap reveal stagger-children">
-    <div class="section-header">
-      <h2 class="section-title"><span class="num">02</span> projects</h2>
-      <p class="section-lede">Pinned repositories — full-stack web apps built with PHP and MySQL.</p>
-    </div>
-    <div class="project-grid">
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects" class="section wrap reveal">
+    <p class="section-label">projects</p>
+    <h2 class="section-title">Coursework & builds</h2>
+    <p class="section-sub">Web apps and prototypes built through university coursework and design projects.</p>
 
-      <article class="project-card reveal-child">
-        <div class="project-head">
+    <div class="project-cards">
+
+      <a class="project-card" href="https://github.com/airo-28/UM-Room-Reservation-System" target="_blank" rel="noopener">
+        <div class="project-card-inner">
           <h3>CollabSpace — UM Room Reservation</h3>
-          <span class="tag">PHP</span>
+          <p>Room booking system for UM. Student & admin portals with calendar approvals, audit logs, glassmorphism UI, CSRF guards, and bcrypt auth.</p>
+          <div class="project-tech-row">
+            <span>PHP</span><span>MySQL / SQLite</span><span>Bootstrap 5</span>
+          </div>
         </div>
-        <p class="project-desc">
-          A modern, responsive room reservation system for the University of Mindanao.
-          Students can book collaboration rooms, labs, and classrooms by the hour.
-          Admins manage rooms, users, announcements, and audit logs. Features
-          glassmorphism UI, CSRF protection, bcrypt auth, and PDO prepared statements.
-        </p>
-        <div class="project-tech">
-          <span>PHP 7.4+</span>
-          <span>MySQL / SQLite</span>
-          <span>Bootstrap 5</span>
-          <span>AOS</span>
-        </div>
-        <a class="project-link" href="https://github.com/airo-28/UM-Room-Reservation-System" target="_blank" rel="noopener">view_repo →</a>
-      </article>
+        <span class="project-arrow">→</span>
+      </a>
 
-      <article class="project-card reveal-child">
-        <div class="project-head">
+      <a class="project-card" href="https://github.com/airo-28/Library-Collaboration-Room-Booking-System" target="_blank" rel="noopener">
+        <div class="project-card-inner">
           <h3>Library Room Booking System</h3>
-          <span class="tag">PHP</span>
+          <p>Library collaboration room reservation with student & admin portals, real-time availability checks, and booking approvals. Web dev final project.</p>
+          <div class="project-tech-row">
+            <span>PHP</span><span>MySQL</span><span>HTML/CSS</span>
+          </div>
         </div>
-        <p class="project-desc">
-          Web development final project — a library collaboration room booking
-          system with student and admin portals. Students can search availability,
-          book rooms, and track their reservations. Admins manage room schedules
-          and approve requests.
-        </p>
-        <div class="project-tech">
-          <span>PHP</span>
-          <span>MySQL</span>
-          <span>CSS</span>
-        </div>
-        <a class="project-link" href="https://github.com/airo-28/Library-Collaboration-Room-Booking-System" target="_blank" rel="noopener">view_repo →</a>
-      </article>
+        <span class="project-arrow">→</span>
+      </a>
 
-      <article class="project-card reveal-child">
-        <div class="project-head">
+      <a class="project-card" href="https://github.com/airo-28/Salon-Booking-System" target="_blank" rel="noopener">
+        <div class="project-card-inner">
           <h3>Salon Booking System</h3>
-          <span class="tag">PHP</span>
+          <p>Appointment scheduling and service management for salons. Handles customer bookings, stylist assignment, and booking confirmations.</p>
+          <div class="project-tech-row">
+            <span>PHP</span><span>MySQL</span>
+          </div>
         </div>
-        <p class="project-desc">
-          An appointment and booking management system for salons. Handles
-          customer scheduling, service selection, and booking confirmations
-          with a clean, user-friendly interface.
-        </p>
-        <div class="project-tech">
-          <span>PHP</span>
-          <span>MySQL</span>
-        </div>
-        <a class="project-link" href="https://github.com/airo-28/Salon-Booking-System" target="_blank" rel="noopener">view_repo →</a>
-      </article>
+        <span class="project-arrow">→</span>
+      </a>
 
-      <article class="project-card reveal-child">
-        <div class="project-head">
+      <a class="project-card" href="https://github.com/airo-28/UMDC-System" target="_blank" rel="noopener">
+        <div class="project-card-inner">
           <h3>UMDC System</h3>
-          <span class="tag">PHP</span>
+          <p>Data center resource tracking and equipment management system for the University of Mindanao.</p>
+          <div class="project-tech-row">
+            <span>PHP</span><span>MySQL</span>
+          </div>
         </div>
-        <p class="project-desc">
-          University of Mindanao Data Center management system. A web-based
-          tool for organizing and tracking campus data center resources,
-          equipment, and operations.
-        </p>
-        <div class="project-tech">
-          <span>PHP</span>
-          <span>MySQL</span>
+        <span class="project-arrow">→</span>
+      </a>
+
+      <a class="project-card" href="https://www.figma.com/proto/8DeMUWTd0kl1saW9VO5Cyf/University-of-Mindanao---Dining-Center?node-id=711-14492&t=f20hm3b9QE4OHRhJ-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=711%3A14492" target="_blank" rel="noopener">
+        <div class="project-card-inner">
+          <h3>UM Dining Center — UI/UX Prototype</h3>
+          <p>Interactive Figma prototype for the University of Mindanao's dining center. Full user flow with responsive layouts and component design.</p>
+          <div class="project-tech-row">
+            <span>Figma</span><span>UI/UX Design</span><span>Prototyping</span>
+          </div>
         </div>
-        <a class="project-link" href="https://github.com/airo-28/UMDC-System" target="_blank" rel="noopener">view_repo →</a>
-      </article>
+        <span class="project-arrow">↗</span>
+      </a>
 
     </div>
   </section>
 
-  <!-- ─── EDUCATION ─── -->
-  <section id="education" class="section wrap reveal">
-    <div class="section-header">
-      <h2 class="section-title"><span class="num">03</span> education</h2>
-    </div>
-    <div class="edu-item">
-      <span class="edu-year">2023 — Present</span>
+  <!-- ═══ CREDENTIALS — Education + Certs merged ═══ -->
+  <section id="credentials" class="section wrap reveal">
+    <p class="section-label">credentials</p>
+    <h2 class="section-title">Education & certifications</h2>
+
+    <div class="cred-grid">
       <div>
-        <h3>BS Computer Science</h3>
-        <p>University of Mindanao, Davao City — Third year. Coursework spans programming languages, web development, databases, and software engineering.</p>
+        <h3 class="cred-block-title">Education</h3>
+        <div class="cred-item">
+          <h4>BS Computer Science</h4>
+          <p class="cred-meta">University of Mindanao, Davao City — Third year</p>
+          <p class="cred-meta">Coursework: web development, databases, programming languages, software engineering</p>
+          <p class="cred-date">2023 — Present</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="cred-block-title">IT Specialist — Pearson/Certiport</h3>
+        <div class="cred-item">
+          <h4>Cybersecurity</h4>
+          <p class="cred-date">Expires May 2031</p>
+        </div>
+        <div class="cred-item">
+          <h4>Databases</h4>
+          <p class="cred-date">Issued May 2025</p>
+        </div>
+        <div class="cred-item">
+          <h4>Java</h4>
+          <p class="cred-date">Issued March 2024</p>
+        </div>
+        <a href="https://www.credly.com/users/airo-parondo" target="_blank" rel="noopener" style="font-size:0.78rem;margin-top:12px;display:inline-block;">view credly profile →</a>
       </div>
     </div>
-    <div class="edu-item">
-      <span class="edu-year">2024 — 2025</span>
-      <div>
-        <h3>IT Specialist Certifications</h3>
-        <p>Earned Pearson/Certiport IT Specialist badges in Java, Databases, and Cybersecurity alongside coursework.</p>
-      </div>
-    </div>
   </section>
 
-  <!-- ─── CERTIFICATIONS ─── -->
-  <section id="certs" class="section wrap reveal">
-    <div class="section-header">
-      <h2 class="section-title"><span class="num">04</span> certifications</h2>
-      <p class="section-lede">IT Specialist certifications issued by Certiport, a Pearson VUE business.</p>
-    </div>
-    <div class="cert-grid">
-
-      <a class="cert-card" href="https://www.credly.com/users/airo-parondo" target="_blank" rel="noopener">
-        <div class="cert-icon">🛡</div>
-        <div>
-          <h3>Cybersecurity</h3>
-          <p class="cert-meta">Expires May 21, 2031</p>
-        </div>
-      </a>
-
-      <a class="cert-card" href="https://www.credly.com/users/airo-parondo" target="_blank" rel="noopener">
-        <div class="cert-icon">🗄</div>
-        <div>
-          <h3>Databases</h3>
-          <p class="cert-meta">Issued May 16, 2025</p>
-        </div>
-      </a>
-
-      <a class="cert-card" href="https://www.credly.com/users/airo-parondo" target="_blank" rel="noopener">
-        <div class="cert-icon">☕</div>
-        <div>
-          <h3>Java</h3>
-          <p class="cert-meta">Issued March 9, 2024</p>
-        </div>
-      </a>
-
-    </div>
-    <a class="text-link" href="https://www.credly.com/users/airo-parondo" target="_blank" rel="noopener">view_credly_profile →</a>
-  </section>
-
-  <!-- ─── TYPING ─── -->
+  <!-- ═══ TYPING — Interactive Test + My Stats ═══ -->
   <section id="typing" class="section wrap reveal">
-    <div class="section-header">
-      <h2 class="section-title"><span class="num">05</span> typing</h2>
-      <p class="section-lede">
-        I keep a daily MonkeyType habit. It's a small thing, but it reflects how
-        I work: focused, consistent, and comfortable improving incrementally over time.
-      </p>
+    <p class="section-label">typing</p>
+    <h2 class="section-title">Try it yourself</h2>
+    <p class="section-sub">
+      I keep a daily MonkeyType habit. Click below and start typing — see how you compare.
+    </p>
+
+    <!-- Interactive typing test -->
+    <div class="typing-test-area" id="typing-test" tabindex="0">
+      <div class="test-prompt" id="test-prompt">
+        <!-- JS fills this -->
+      </div>
+      <input class="typing-test-input" id="test-input" autocomplete="off" autocapitalize="off" spellcheck="false">
+      <div class="test-stats-bar">
+        <div class="test-stat">
+          <span class="test-stat-value" id="test-wpm">0</span>
+          <span class="test-stat-label">wpm</span>
+        </div>
+        <div class="test-stat">
+          <span class="test-stat-value" id="test-acc">100</span>
+          <span class="test-stat-label">accuracy</span>
+        </div>
+        <div class="test-stat">
+          <span class="test-stat-value" id="test-time">0</span>
+          <span class="test-stat-label">seconds</span>
+        </div>
+      </div>
+      <p class="test-hint">click here and start typing · <kbd>tab</kbd> to restart</p>
     </div>
 
-    <div class="typing-display">
-      <div class="typing-header">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="typing-header-title">monkeytype — algernon1</span>
-      </div>
-      <div class="typing-body">
-        <p class="typing-command"><span class="prompt">$</span> fetch --user algernon1 --stats</p>
-        <div class="stat-grid">
-          <div class="stat-block">
-            <span class="stat-label">15s</span>
-            <span class="stat-value">171 wpm</span>
-            <span class="stat-sub">98% acc</span>
-          </div>
-          <div class="stat-block">
-            <span class="stat-label">30s</span>
-            <span class="stat-value">144 wpm</span>
-            <span class="stat-sub">96% acc</span>
-          </div>
-          <div class="stat-block">
-            <span class="stat-label">60s</span>
-            <span class="stat-value">136 wpm</span>
-            <span class="stat-sub">95% acc</span>
-          </div>
-          <div class="stat-block">
-            <span class="stat-label">10w</span>
-            <span class="stat-value">213 wpm</span>
-            <span class="stat-sub">100% acc</span>
-          </div>
-        </div>
-        <p class="typing-rank">
-          <span class="prompt">$</span> rank --leaderboard 60s<br>
-          15,681 / global · top 3.15% &nbsp;·&nbsp; 1,146 tests completed &nbsp;·&nbsp; 11h 53m typed
-        </p>
-      </div>
-    </div>
-    <a class="text-link" href="https://monkeytype.com/profile/algernon1" target="_blank" rel="noopener">view_monkeytype →</a>
+    <!-- My stats — rendered from config by JS -->
+    <h3 class="section-title" style="font-size:1rem;margin-bottom:16px;">My stats — algernon1</h3>
+    <div class="my-stats" id="my-stats"><!-- JS fills this --></div>
+    <div class="typing-meta" id="typing-meta"><!-- JS fills this --></div>
   </section>
 
-  <!-- ─── CONTACT ─── -->
+  <!-- ═══ CONTACT ═══ -->
   <section id="contact" class="section wrap reveal">
-    <div class="section-header">
-      <h2 class="section-title"><span class="num">06</span> contact</h2>
-    </div>
-    <div class="contact-grid">
-      <a class="contact-item" href="mailto:a.parondo.549789@umindanao.edu.ph">
-        <span class="contact-label">email</span>
-        <span class="contact-value">a.parondo.549789@umindanao.edu.ph</span>
+    <p class="section-label">contact</p>
+    <h2 class="section-title">Get in touch</h2>
+    <p class="section-sub" style="margin-bottom:24px;">Open to opportunities, collaborations, or just a chat about tech.</p>
+    <div class="contact-row">
+      <a class="contact-pill" href="mailto:a.parondo.549789@umindanao.edu.ph">
+        <span class="c-label">email</span> a.parondo.549789@umindanao.edu.ph
       </a>
-      <a class="contact-item" href="https://github.com/airo-28" target="_blank" rel="noopener">
-        <span class="contact-label">github</span>
-        <span class="contact-value">github.com/airo-28</span>
+      <a class="contact-pill" href="https://github.com/airo-28" target="_blank" rel="noopener">
+        <span class="c-label">github</span> airo-28
       </a>
-      <a class="contact-item" href="https://www.linkedin.com/in/airo-parondo-640719327/" target="_blank" rel="noopener">
-        <span class="contact-label">linkedin</span>
-        <span class="contact-value">Airo Parondo</span>
+      <a class="contact-pill" href="https://www.linkedin.com/in/airo-parondo-640719327/" target="_blank" rel="noopener">
+        <span class="c-label">linkedin</span> Airo Parondo
       </a>
     </div>
   </section>
@@ -336,69 +279,294 @@
 </main>
 
 <footer class="site-footer">
-  <p>© 2026 Airo Parondo · built with vanilla HTML, CSS & JS</p>
+  <p>© 2026 Airo Parondo · <a href="https://monkeytype.com/profile/algernon1" target="_blank" rel="noopener" style="color:var(--text-xdim)">algernon1</a></p>
 </footer>
 
 <script>
-  // ── Scroll Reveal with stagger ──
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
+// ════════════════════════════════════════
+// FLOATING CHARACTERS BACKGROUND
+// ════════════════════════════════════════
+(function() {
+  const bg = document.getElementById('char-bg');
+  const chars = 'abcdefghijklmnopqrstuvwxyz{}[]<>()=+;:/\\|!@#&*~'.split('');
+  const colors = ['c-gold', 'c-green', 'c-blue', 'c-dim', 'c-dim', 'c-dim'];
+  const count = 45;
 
-        // Stagger children if parent has .stagger-children
-        if (entry.target.classList.contains('stagger-children')) {
-          const children = entry.target.querySelectorAll('.reveal-child');
-          children.forEach((child, i) => {
-            child.style.transitionDelay = `${i * 0.1}s`;
-          });
-        }
-
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08 });
-
-  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-  // ── Mobile Menu ──
-  const menuToggle = document.getElementById('menu-toggle');
-  const mainNav = document.getElementById('main-nav');
-  const overlay = document.getElementById('mobile-overlay');
-
-  function toggleMenu() {
-    menuToggle.classList.toggle('active');
-    mainNav.classList.toggle('is-open');
-    overlay.classList.toggle('is-open');
-    document.body.style.overflow = mainNav.classList.contains('is-open') ? 'hidden' : '';
+  for (let i = 0; i < count; i++) {
+    const span = document.createElement('span');
+    span.textContent = chars[Math.floor(Math.random() * chars.length)];
+    span.className = colors[Math.floor(Math.random() * colors.length)];
+    span.style.left = Math.random() * 100 + '%';
+    span.style.animationDelay = Math.random() * 18 + 's';
+    span.style.animationDuration = (14 + Math.random() * 12) + 's';
+    // Sizes between 24px and 48px — much larger and visible
+    span.style.fontSize = (24 + Math.random() * 24) + 'px';
+    bg.appendChild(span);
   }
+})();
 
-  menuToggle.addEventListener('click', toggleMenu);
-  overlay.addEventListener('click', toggleMenu);
+// ════════════════════════════════════════
+// HERO TYPING SIMULATION
+// ════════════════════════════════════════
+(function() {
+  const text = "curious about how systems work and how they break. building things, learning as i go, one commit at a time.";
+  const container = document.getElementById('typing-sim-text');
+  const wpmDisplay = document.getElementById('sim-wpm-display');
 
-  // Close menu when clicking a nav link
-  mainNav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (mainNav.classList.contains('is-open')) toggleMenu();
-    });
+  // Create char spans
+  text.split('').forEach((char, i) => {
+    const span = document.createElement('span');
+    span.classList.add('char');
+    span.textContent = char;
+    if (i === 0) span.classList.add('current');
+    container.appendChild(span);
   });
 
-  // ── Smooth active nav highlight ──
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.site-header nav a');
+  const charSpans = container.querySelectorAll('.char');
+  let idx = 0;
+  let wpm = 0;
 
-  const navObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        navLinks.forEach(link => {
-          link.style.color = link.getAttribute('href') === `#${id}` ? '#d1d0c5' : '';
-        });
+  function typeNext() {
+    if (idx >= charSpans.length) {
+      // Reset after pause
+      setTimeout(() => {
+        charSpans.forEach(s => { s.classList.remove('typed', 'current'); });
+        charSpans[0].classList.add('current');
+        idx = 0;
+        wpm = 0;
+        setTimeout(typeNext, 1200);
+      }, 3000);
+      return;
+    }
+
+    charSpans[idx].classList.add('typed');
+    charSpans[idx].classList.remove('current');
+    idx++;
+    if (idx < charSpans.length) charSpans[idx].classList.add('current');
+
+    // Simulate wpm climbing
+    wpm = Math.min(136, Math.floor((idx / text.length) * 148));
+    wpmDisplay.textContent = wpm;
+
+    const delay = 30 + Math.random() * 70;
+    setTimeout(typeNext, delay);
+  }
+
+  // Start after hero animation
+  setTimeout(typeNext, 1500);
+})();
+
+// ════════════════════════════════════════
+// INTERACTIVE TYPING TEST
+// ════════════════════════════════════════
+(function() {
+  const sentences = [
+    "the quick brown fox jumps over the lazy dog near the riverbank",
+    "coding is not about typing fast it is about thinking clearly",
+    "cybersecurity is the practice of protecting systems from threats",
+    "a good developer writes code that humans can understand easily",
+    "the best way to learn programming is to build real projects",
+  ];
+
+  let currentSentence = sentences[Math.floor(Math.random() * sentences.length)];
+  const promptEl = document.getElementById('test-prompt');
+  const inputEl = document.getElementById('test-input');
+  const testArea = document.getElementById('typing-test');
+  const wpmEl = document.getElementById('test-wpm');
+  const accEl = document.getElementById('test-acc');
+  const timeEl = document.getElementById('test-time');
+
+  let startTime = null;
+  let correctChars = 0;
+  let totalTyped = 0;
+  let timer = null;
+  let finished = false;
+
+  function renderPrompt() {
+    promptEl.innerHTML = '';
+    currentSentence.split('').forEach((char, i) => {
+      const span = document.createElement('span');
+      span.classList.add('test-char', 'untyped');
+      span.textContent = char;
+      if (i === 0) span.classList.add('active');
+      promptEl.appendChild(span);
+    });
+  }
+
+  function resetTest() {
+    currentSentence = sentences[Math.floor(Math.random() * sentences.length)];
+    renderPrompt();
+    inputEl.value = '';
+    startTime = null;
+    correctChars = 0;
+    totalTyped = 0;
+    finished = false;
+    wpmEl.textContent = '0';
+    accEl.textContent = '100';
+    timeEl.textContent = '0';
+    if (timer) clearInterval(timer);
+  }
+
+  function updateStats() {
+    if (!startTime) return;
+    const elapsed = (Date.now() - startTime) / 1000;
+    const minutes = elapsed / 60;
+    const wpm = minutes > 0 ? Math.round((correctChars / 5) / minutes) : 0;
+    const acc = totalTyped > 0 ? Math.round((correctChars / totalTyped) * 100) : 100;
+
+    wpmEl.textContent = wpm;
+    accEl.textContent = acc;
+    timeEl.textContent = Math.floor(elapsed);
+  }
+
+  renderPrompt();
+
+  testArea.addEventListener('click', () => {
+    inputEl.focus();
+  });
+
+  inputEl.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+      e.preventDefault();
+      resetTest();
+      return;
+    }
+  });
+
+  inputEl.addEventListener('input', () => {
+    if (finished) return;
+
+    const typed = inputEl.value;
+    const chars = promptEl.querySelectorAll('.test-char');
+
+    if (!startTime && typed.length > 0) {
+      startTime = Date.now();
+      timer = setInterval(updateStats, 200);
+    }
+
+    correctChars = 0;
+    totalTyped = typed.length;
+
+    chars.forEach((span, i) => {
+      span.classList.remove('correct', 'wrong', 'untyped', 'active');
+      if (i < typed.length) {
+        if (typed[i] === currentSentence[i]) {
+          span.classList.add('correct');
+          correctChars++;
+        } else {
+          span.classList.add('wrong');
+        }
+      } else if (i === typed.length) {
+        span.classList.add('untyped', 'active');
+      } else {
+        span.classList.add('untyped');
       }
     });
-  }, { threshold: 0.3, rootMargin: '-80px 0px -40% 0px' });
 
-  sections.forEach(section => navObserver.observe(section));
+    updateStats();
+
+    // Finished
+    if (typed.length >= currentSentence.length) {
+      finished = true;
+      clearInterval(timer);
+      updateStats();
+      // Flash the area
+      testArea.classList.add('keypress-flash');
+      setTimeout(() => testArea.classList.remove('keypress-flash'), 400);
+    }
+  });
+})();
+
+// ════════════════════════════════════════
+// TYPING STATS — Easy-to-update config
+// ════════════════════════════════════════
+// ┌─ UPDATE YOUR STATS HERE ─────────────────────┐
+// │  Just change the numbers below when your      │
+// │  MonkeyType stats change.                     │
+// └───────────────────────────────────────────────┘
+const MY_TYPING_STATS = {
+  lastUpdated: 'June 2026',
+  profile: 'algernon1',
+  profileUrl: 'https://monkeytype.com/profile/algernon1',
+  rank: '15,681 / global',
+  rankPercent: 'top 3.15%',
+  tests: '1,146',
+  timeTyped: '11h 53m',
+  modes: [
+    { mode: '15s',       wpm: 171, acc: 98 },
+    { mode: '30s',       wpm: 144, acc: 96 },
+    { mode: '60s',       wpm: 136, acc: 95 },
+    { mode: '10 words',  wpm: 213, acc: 100 },
+  ]
+};
+
+(function renderStats() {
+  const container = document.getElementById('my-stats');
+  const meta = document.getElementById('typing-meta');
+  const s = MY_TYPING_STATS;
+
+  container.innerHTML = s.modes.map(m => `
+    <div class="my-stat">
+      <span class="my-stat-mode">${m.mode}</span>
+      <span class="my-stat-wpm">${m.wpm}</span>
+      <span class="my-stat-acc">${m.acc}% acc</span>
+    </div>
+  `).join('');
+
+  meta.innerHTML = `
+    <span>${s.rankPercent} globally · ${s.tests} tests · ${s.timeTyped} typed · <em style="color:var(--text-xdim);font-style:normal;">updated ${s.lastUpdated}</em></span>
+    <a href="${s.profileUrl}" target="_blank" rel="noopener">monkeytype profile →</a>
+  `;
+})();
+
+// ════════════════════════════════════════
+// SCROLL REVEAL
+// ════════════════════════════════════════
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('is-visible');
+      revealObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+// ════════════════════════════════════════
+// MOBILE MENU
+// ════════════════════════════════════════
+const menuToggle = document.getElementById('menu-toggle');
+const mainNav = document.getElementById('main-nav');
+const overlay = document.getElementById('mobile-overlay');
+
+function toggleMenu() {
+  menuToggle.classList.toggle('active');
+  mainNav.classList.toggle('is-open');
+  overlay.classList.toggle('is-open');
+  document.body.style.overflow = mainNav.classList.contains('is-open') ? 'hidden' : '';
+}
+menuToggle.addEventListener('click', toggleMenu);
+overlay.addEventListener('click', toggleMenu);
+mainNav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
+  if (mainNav.classList.contains('is-open')) toggleMenu();
+}));
+
+// ════════════════════════════════════════
+// ACTIVE NAV TRACKING
+// ════════════════════════════════════════
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav a');
+const navObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const id = e.target.getAttribute('id');
+      navLinks.forEach(l => {
+        l.style.color = l.getAttribute('href') === `#${id}` ? '#d1d0c5' : '';
+      });
+    }
+  });
+}, { threshold: 0.25, rootMargin: '-80px 0px -40% 0px' });
+sections.forEach(s => navObs.observe(s));
 </script>
 </body>
 </html>
